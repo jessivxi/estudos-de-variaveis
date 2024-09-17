@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Variável</title>
+</head>
+<body>
+    <h1 id="titulo"></h1>
+
+    <script>
+        // Aqui definimos uma variável em JavaScript
+        var nome = "João";
+
+        // Usamos a variável para alterar o conteúdo do HTML
+        document.getElementById("titulo").innerHTML = "Bem-vindo, " + nome + "!";
+    </script>
+
+    <h1 id="titulo">Clique no botão para mudar o título</h1>
+    <button onclick="mudarTitulo()">Clique Aqui</button>
+
+    <script>
+        // Função JavaScript que altera o conteúdo do HTML
+        function mudarTitulo() {
+            var novoTitulo = "Você mudou o título!";
+            document.getElementById("titulo").innerHTML = novoTitulo;
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!--  HTML define um título <h1> e um botão <button>.
+Quando o usuário clica no botão, a função JavaScript mudarTitulo() é chamada.
+Essa função altera o texto do título <h1> usando o método document.getElementById("titulo").innerHTML, que insere o novo valor.
+Elementos-Chave no Uso de HTML com JavaScript
+Manipulação de DOM (Document Object Model): O JavaScript permite acessar e modificar o HTML através do DOM. Cada elemento HTML
+ (como <div>, <p>, <h1>) pode ser manipulado usando funções JavaScript.
+
+Exemplo:
+
+javascript
+Copiar código
+document.getElementById("meuElemento").innerHTML = "Novo conteúdo";
+Eventos: O JavaScript responde a eventos do usuário, como cliques, envio de formulários, teclas pressionadas, entre outros.
+
+Exemplo de evento onclick:
+
+html
+Copiar código
+<button onclick="minhaFuncao()">Clique aqui</button>
+Variáveis e Condições: No JavaScript, você pode criar variáveis para armazenar dados e usar condições para controlar o fluxo das ações.
+
+Exemplo:
+
+javascript
+Copiar código
+var cor = "vermelho";
+if (cor === "vermelho") {
+    alert("A cor é vermelha!");
+}
+Formulários e Validações: Com JavaScript, você pode validar campos de formulários antes de enviar dados, evitando o envio de informações incompletas ou incorretas.
+
+Exemplo de validação simples:
+
+html
+Copiar código
+<form onsubmit="return validarFormulario()">
+    <input type="text" id="nome">
+    <button type="submit">Enviar</button>
+</form>
+
+<script>
+    function validarFormulario() {
+        var nome = document.getElementById("nome").value;
+        if (nome === "") {
+            alert("O nome não pode estar vazio");
+            return false;  // Impede o envio do formulário
+        }
+        return true;
+    }
+</script>
+Como Funciona a "Lógica" no HTML + JavaScript?
+Com o HTML, você não tem lógica de programação diretamente. Quando o JavaScript entra em cena, ele é capaz de:
+
+Declarar variáveis: Usando var, let ou const para armazenar dados.
+Usar condicionais: Para tomar decisões com if, else, etc.
+Usar loops: Para repetir ações com for, while, etc.
+Manipular o conteúdo da página: Alterar textos, imagens, classes CSS, atributos HTML, etc.
+Exemplo Mais Completo de HTML + JavaScript:
+Aqui está um exemplo onde combinamos estrutura HTML com lógica JavaScript para criar uma interação mais complexa:
+
+html
+Copiar código
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo Completo</title>
+</head>
+<body>
+    <h1 id="titulo">Contador: 0</h1>
+    <button onclick="incrementar()">Incrementar</button>
+    <button onclick="resetar()">Resetar</button>
+
+    <script>
+        // Variável para armazenar o valor do contador
+        var contador = 0;
+
+        // Função para incrementar o contador e atualizar o HTML
+        function incrementar() {
+            contador += 1;  // Adiciona 1 ao contador
+            document.getElementById("titulo").innerHTML = "Contador: " + contador;
+        }
+
+        // Função para resetar o contador
+        function resetar() {
+            contador = 0;  // Define o contador como 0
+            document.getElementById("titulo").innerHTML = "Contador: " + contador;
+        }
+    </script>
+</body>
+</html>
+Nesse exemplo:
+
+Temos um contador que começa em 0.
+Cada vez que o botão "Incrementar" é clicado, o JavaScript aumenta o valor do contador e o exibe no título <h1>.
+O botão "Resetar" redefine o valor do contador para 0.
+Resumindo:
+HTML fornece a estrutura (elementos como títulos, botões, etc.).
+JavaScript adiciona a lógica de programação, como variáveis, funções e manipulação de eventos.
+Juntos, HTML e JavaScript tornam as páginas dinâmicas e interativas, oferecendo uma experiência mais rica ao usuário.
+Se você quiser criar interatividade em seu site, JavaScript é a chave para adicionar lógica e comportamento aos elementos definidos pelo HTML. -->
